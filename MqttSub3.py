@@ -5,7 +5,7 @@ import paho.mqtt.client
 
 def on_connect(client, userdata, flags, rc):
 	print('connected (%s)' % client._client_id)
-	client.subscribe(topic='casa/cocina/+', qos=2)
+	client.subscribe(topic='casa/cocina/#', qos=2)
 
 def on_message(client, userdata, message):
 	print('------------------------------')
